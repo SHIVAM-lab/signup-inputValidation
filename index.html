@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<head><script>
+function validateForm() {
+    var x = document.forms["myForm"]["name"].value;
+    if (x == "") {
+      alert("name must be filled out");
+      return false;
+    }
+    var a = document.forms["myForm"]["email"].value;
+    if (a == "") {
+      alert("email must be filled out");
+      return false;
+    }
+    var b = document.forms["myForm"]["password"].value;
+    if (b == "") {
+      alert("password must be filled out");
+      return false;
+    }
+    var c = document.forms["myForm"]["birthdate"].value;
+    if (c == "") {
+      alert("brithdate must be filled out");
+      return false;
+    }
+    var d = document.forms["myForm"]["gender"].value;
+    if ((d == ""||(x!="MALE"||x!="FEMALE"))||x!="BINARY" ){
+      alert("Gender must be filled out");
+      return false;
+    }
+  }
+  </script></head>
+ <body>
+     
+ 
+<form class="item" name="myForm" action="/" method="post" onsubmit="return validateForm()">
+    <label for="name">FULL NAME:</label>
+    <input type="text" name="name" autocomplete="off">
+    <label for="email">E MAIL:</label>
+    <input type="email" name="email" autocomplete="off">
+    <label for="password">PASSWORD:</label>
+    <input type="password" name="password" autocomplete="off">
+    <label for="birthdate">DATEOFBIRTH:</label>
+    <input type="date" name="birthdate" autocomplete="off">
+    <label for="gender">GENDER:</label>
+    <input type="text" name="gender" autocomplete="off">
+    <button type="submit">SUBMIT</button>
+  </form>
+</body>
+</head>
