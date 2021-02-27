@@ -52,7 +52,7 @@ const Item = mongoose.model("Item", itemsSchema);
          
          });
  app.get("/welcome",(req,res) => {
-   res.redirect("/success");
+   res.redirect("/welcome");
    });
 
 let port = process.env.PORT;
